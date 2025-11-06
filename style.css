@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Marcellus+SC&family=Quicksand:wght@400;600&display=swap');
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  font-family: 'Quicksand', sans-serif;
+  background: radial-gradient(circle at top, #1b2735 0%, #090a0f 80%);
+  color: #f5efe4;
+}
+
+canvas#luciérnagas {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  z-index: 0;
+  background: transparent;
+}
+
+header, main {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+header {
+  margin-top: 40px;
+  color: #f9f4e6;
+}
+
+header h1 {
+  font-family: 'Marcellus SC', serif;
+  font-size: 2.4em;
+  text-shadow: 1px 1px 8px rgba(255,255,200,0.4);
+}
+
+.videos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px;
+  margin: 60px 0;
+}
+
+.video-card {
+  width: 300px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(4px);
+}
+
+.video-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 8px 25px rgba(255,255,200,0.3);
+}
+
+.video-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.video-card p {
+  font-size: 1.2em;
+  font-weight: 600;
+  margin: 12px 0;
+  color: #fff7d0;
+}
+
+#visor {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+#visor.oculto {
+  display: none;
+}
+
+.cerrar {
+  position: absolute;
+  top: 20px; right: 30px;
+  background: rgba(255,255,255,0.2);
+  border: 2px solid #fff;
+  color: white;
+  font-size: 1.4em;
+  padding: 8px 12px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.cerrar:hover {
+  background: rgba(255,255,255,0.4);
+}
+
+#videoPlayer {
+  width: 80%;
+  max-width: 900px;
+  border-radius: 10px;
+  box-shadow: 0 0 40px rgba(255,230,200,0.25);
+}

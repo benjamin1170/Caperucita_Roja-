@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mis Videos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="luciérnagas"></canvas>
+
+  <header>
+    <h1>🎬 Cuentos</h1>
+    <p>Bienvenidos niños y niñas </p>
+  </header>
+
+  <main class="videos">
+    <div class="video-card" onclick="abrirVideo(1)">
+      <img src="https://tse1.mm.bing.net/th/id/OIP.pjqj6qsYnh4Qe0RycwGVlwHaE7?pid=Api&P=0&h=180" alt="Miniatura 1">
+      <p>Video 1 - Cuento + Señas </p>
+    </div>
+
+    <div class="video-card" onclick="abrirVideo(2)">
+      <img src="Caperucita_dia.png" alt="Miniatura 2">
+      <p>Video 2 - Cuento + Mapudungun</p>
+    </div>
+  </main>
+
+  <section id="visor" class="oculto">
+    <button class="cerrar" onclick="cerrarVideo()">✖</button>
+    <video id="videoPlayer" controls></video>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
