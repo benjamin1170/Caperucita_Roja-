@@ -11,24 +11,36 @@
 
   <header>
     <h1>🎬 Cuentos</h1>
-    <p>Bienvenidos niños y niñas </p>
+    <p>Bienvenidos niños y niñas</p>
   </header>
 
   <main class="videos">
     <div class="video-card" onclick="abrirVideo(1)">
       <img src="https://tse1.mm.bing.net/th/id/OIP.pjqj6qsYnh4Qe0RycwGVlwHaE7?pid=Api&P=0&h=180" alt="Miniatura 1">
-      <p>Video 1 - Cuento + Señas </p>
+      <p>Video 1 - Cuento + Señas</p>
     </div>
 
     <div class="video-card" onclick="abrirVideo(2)">
       <img src="Caperucita_dia.png" alt="Miniatura 2">
       <p>Video 2 - Cuento + Mapudungun</p>
     </div>
+
+    <div class="video-card" onclick="abrirVideo(3)">
+      <img src="https://tse1.mm.bing.net/th/id/OIP.Af74Lj-abc123?pid=Api&P=0&h=180" alt="Miniatura 3">
+      <p>Video 3 - Cuento en Inglés</p>
+    </div>
+
+    <div class="video-card" onclick="abrirVideo(4)">
+      <img src="https://tse1.mm.bing.net/th/id/OIP.Xyz456xyz?pid=Api&P=0&h=180" alt="Miniatura 4">
+      <p>Video 4 - Cuento en Español Latino</p>
+    </div>
   </main>
 
   <section id="visor" class="oculto">
     <button class="cerrar" onclick="cerrarVideo()">✖</button>
+    <button class="nav-btn anterior" onclick="cambiarVideo(-1)">⏮️</button>
     <video id="videoPlayer" controls></video>
+    <button class="nav-btn siguiente" onclick="cambiarVideo(1)">⏭️</button>
   </section>
 
   <script src="script.js"></script>

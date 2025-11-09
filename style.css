@@ -33,16 +33,18 @@ header h1 {
   text-shadow: 1px 1px 8px rgba(255,255,200,0.4);
 }
 
+/* === GRID DE VIDEOS === */
 .videos {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 50px;
-  margin: 60px 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 40px;
+  justify-items: center;
+  padding: 60px 20px;
 }
 
 .video-card {
-  width: 300px;
+  width: 100%;
+  max-width: 300px;
   background: rgba(255,255,255,0.1);
   border-radius: 14px;
   box-shadow: 0 6px 20px rgba(0,0,0,0.4);
@@ -64,12 +66,13 @@ header h1 {
 }
 
 .video-card p {
-  font-size: 1.2em;
+  font-size: 1.1em;
   font-weight: 600;
   margin: 12px 0;
   color: #fff7d0;
 }
 
+/* === VISOR DE VIDEO === */
 #visor {
   position: fixed;
   top: 0; left: 0;
@@ -95,6 +98,7 @@ header h1 {
   padding: 8px 12px;
   border-radius: 50%;
   cursor: pointer;
+  transition: background 0.3s ease;
 }
 
 .cerrar:hover {
@@ -106,4 +110,43 @@ header h1 {
   max-width: 900px;
   border-radius: 10px;
   box-shadow: 0 0 40px rgba(255,230,200,0.25);
+}
+
+/* === BOTONES DE NAVEGACIÓN === */
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.2);
+  border: 2px solid #fff;
+  color: white;
+  font-size: 2em;
+  padding: 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 20;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.nav-btn:hover {
+  background: rgba(255,255,255,0.4);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.nav-btn.anterior {
+  left: 40px;
+}
+
+.nav-btn.siguiente {
+  right: 40px;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.8em;
+  }
+  .video-card img {
+    height: 160px;
+  }
 }
